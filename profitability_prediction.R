@@ -99,7 +99,7 @@ testing <- cleanData[-inTrain,]
 # #predict using the linear model
 # lmpred <- predict(lmtrain, newdata = testing)
 # postResample(lmpred, testing$volume)
-# # RMSE = 227, R² = 0.67, because lm is parametric
+# # RMSE = 227, RÂ² = 0.67, because lm is parametric
 
 # SVM ####
 # traincontrol
@@ -118,7 +118,7 @@ svmpred <- predict(svmtrain, testing)
 
 # check prediction
 postResample(svmpred, testing$volume) # RMSE = 201
-# R² = 0.75
+# RÂ² = 0.75
 
 
 # random forest ####
@@ -133,7 +133,7 @@ rfpred <- predict(rftrain, newdata = testing)
 
 # test prediction 
 postResample(rfpred, testing$volume) # that gave RMSE
-# 196 and R² 0.76, now 204.8652447 and 0.5174344
+# 196 and RÂ² 0.76, now 204.8652447 and 0.5174344
 
 # gradient boosting machine ####
 gbmtrain <- train(volume ~ ., data = training, 
@@ -145,7 +145,7 @@ gbmpred <- predict(gbmtrain, newdata = testing)
 
 # test prediction
 postResample(gbmpred, testing$volume) # RMSE 202,
-# R² 0.73 now is 221 and 0.44
+# RÂ² 0.73 now is 221 and 0.44
 
 # extreme gradient boosting machine ####
 xgbmtrain <- train(volume ~ ., data = training, 
@@ -157,7 +157,7 @@ xgbmpred <- predict(xgbmtrain, newdata = testing)
 
 # test prediction
 postResample(xgbmpred, testing$volume) # RMSE 202,
-# R² 0.73 now is 221 and 0.44
+# RÂ² 0.73 now is 221 and 0.44
 
 # prediction for the new data ####
 
